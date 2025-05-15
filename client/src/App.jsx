@@ -13,7 +13,7 @@ import AnnouncementList from './components/Announcements/AnnouncementList';
 import Dashboard from './pages/Dashboard';
 
 // Configure axios defaults
-axios.defaults.baseURL = 'http://localhost:5000'; // Set the base URL for all API requests
+axios.defaults.baseURL = 'https://smart-campus-portal-api.vercel.app'; // Set the base URL for all API requests
 axios.defaults.withCredentials = true; // Enable sending cookies with cross-origin requests
 
 // Add request interceptor to add auth token to all requests
