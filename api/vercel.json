@@ -1,12 +1,12 @@
 {
   "version":2,
   "builds": [
-    { "src": "*.js", "use": "@vercel/node" }
+    { "src": "server.js", "use": "@vercel/node" }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/",
+      "dest": "server.js",
       "headers": {
         "Access-Control-Allow-Origin": "https://smart-campus-portal-frontend.vercel.app",
         "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
