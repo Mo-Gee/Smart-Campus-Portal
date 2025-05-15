@@ -41,6 +41,10 @@ app.use('/api/bookings', bookingRoutes);
 app.use('/api/maintenance', maintenanceRoutes);
 app.use('/api/announcements', announcementRoutes);
 
+// Add a simple health check route
+app.get('/api/health', (req, res) => {
+  res.status(200).send('API is working');
+});
 // Connect to MongoDB database using connection string from environment variables
 mongoose.connect('mongodb+srv://booking:AnsovHSTtu42dPLS@cluster0.jendkir.mongodb.net/smart-campus?retryWrites=true&w=majority');
 console.log("Connected to DB");
