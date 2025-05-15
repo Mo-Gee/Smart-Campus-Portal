@@ -39,6 +39,11 @@ app.use('/api/maintenance', maintenanceRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/announcements', announcementRoutes);
 
+// Add a simple health check route
+app.get('/api/health', (req, res) => {
+  res.status(200).send('API is working');
+});
+
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/smart-campus')
   .then(() => console.log('Connected to MongoDB'))
