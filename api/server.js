@@ -45,7 +45,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/smart-campus')
+mongoose.connect('mongodb+srv://booking:AnsovHSTtu42dPLS@cluster0.jendkir.mongodb.net/smart-campus?retryWrites=true&w=majority' || 'mongodb://localhost:27017/smart-campus')
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
 
