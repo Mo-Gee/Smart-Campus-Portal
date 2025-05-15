@@ -42,12 +42,12 @@ app.use('/api/maintenance', maintenanceRoutes);
 app.use('/api/announcements', announcementRoutes);
 
 // Connect to MongoDB database using connection string from environment variables
-console.log(process.env.MONGO_URL)       // Log the MongoDB connection string 
-if (!process.env.MONGODB_URL) {
+console.log(process.env.MONGO_URI)       // Log the MongoDB connection string 
+if (!process.env.MONGODB_URI) {
   console.error('MONGODB_URI environment variable is not set!');
   process.exit(1); // Exit the application if the URI is missing
 }
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect(process.env.MONGO_URI);
 //AnsovHSTtu42dPLS
 
 /**
