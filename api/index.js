@@ -42,18 +42,8 @@ app.use('/api/maintenance', maintenanceRoutes);
 app.use('/api/announcements', announcementRoutes);
 
 // Connect to MongoDB database using connection string from environment variables
-console.log("About to connect the database");
 mongoose.connect('mongodb+srv://booking:AnsovHSTtu42dPLS@cluster0.jendkir.mongodb.net/smart-campus?retryWrites=true&w=majority');
-console.log("About to connect the database1.1");            
-console.log(process.env.MONGO_URI);       // Log the MongoDB connection string 
-console.log("About to connect the database1.2");
-//if (!process.env.MONGODB_URI) {
-//  console.error('MONGODB_URI environment variable is not set!');
-//  process.exit(1); // Exit the application if the URI is missing
-//}
-console.log("About to connect the database1.3");
-//mongoose.connect(process.env.MONGO_URI);
-mongoose.connect('mongodb+srv://booking:AnsovHSTtu42dPLS@cluster0.jendkir.mongodb.net/smart-campus?retryWrites=true&w=majority');
+console.log("Connected to DB");
 //AnsovHSTtu42dPLS
 
 /**
