@@ -30,7 +30,8 @@ app.use(cookieParser());
 // Configure CORS to allow requests from the frontend
 app.use(cors({
     credentials: true,                   // Allow credentials (cookies) to be sent cross-origin
-    origin: 'http://localhost:5173'      // Only allow requests from the frontend origin
+    origin: 'http://localhost:5173',      // Only allow requests from the frontend origin
+    methods: ["POST", "GET"]
 }));
 
 // Routes
